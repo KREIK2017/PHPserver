@@ -54,5 +54,41 @@ footer {
     background-color: #333;
     color: #44a1dd;
     position: relative;
-    width: 100%;
+}
+
+.post {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.post li {
+    margin-bottom: 10px;
+}
+
+.post li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.post li a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
 }
