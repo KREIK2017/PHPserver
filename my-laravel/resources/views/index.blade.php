@@ -12,7 +12,8 @@
     <div class="container">
         <h1>Welcome to Index Page</h1>
     </div>
-
+    <a href="{{ route('user.index') }}">View Users</a>
+    
     @include('layouts.footer')
 </body>
 </html>
