@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RedirectController;
@@ -22,3 +23,15 @@ Route::get('/users', [UserController::class, 'getRecords'])->name('user.index');
 Route::get('/edit-user/{id}', [UserController::class, 'edit'])->name('user.edit');
 Route::put('/update-user/{id}', [UserController::class, 'update'])->name('user.update');
 Route::get('/delete-user/{id}', [UserController::class, 'deleteRecord'])->name('user.delete');
+//6
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/protected-page1', [PageController::class, 'page1'])
+    ->middleware('auth')
+    ->name('protected.page1');
+
+Route::get('/protected-page2', [PageController::class, 'page2'])
+    ->middleware('auth')
+    ->name('protected.page2');

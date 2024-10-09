@@ -12,8 +12,12 @@
     <div class="container">
         <h1>Welcome to Index Page</h1>
     </div>
+    @if(Auth::check())
     <a href="{{ route('user.index') }}">View Users</a>
-    
+    <a href="{{ route('protected.page1') }}">Захищена сторінка 1</a>
+    <a href="{{ route('protected.page2') }}">Захищена сторінка 2</a>
+    @endif
+
     @include('layouts.footer')
 </body>
 </html>
