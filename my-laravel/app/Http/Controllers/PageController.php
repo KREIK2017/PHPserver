@@ -42,5 +42,15 @@ class PageController extends Controller
         $post = $posts[$id] ?? 'Пост не знайдено';
         return view('pages.blogs.blog-post', ['post' => $post]);
     }
+
+    public function page1()
+    {
+        return view('protected.page1');
+    }
+
+    public function page2()
+    {
+        return view('protected.page2');
+    }
 }
 
